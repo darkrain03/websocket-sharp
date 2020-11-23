@@ -842,12 +842,12 @@ namespace WebSocketSharp.Server
       host.StartSession (context);
     }
 
-    private void receiveRequest ()
+    private async void receiveRequest ()
     {
       while (true) {
         TcpClient cl = null;
         try {
-          cl = _listener.AcceptTcpClient ();
+          cl = await _listener.AcceptTcpClientAsync();
           ThreadPool.QueueUserWorkItem (
             state => {
               try {

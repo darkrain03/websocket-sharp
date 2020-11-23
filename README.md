@@ -1,3 +1,8 @@
+    This is a fork of the original websocket-sharp repo, created to patch the .NET Core issue with
+    WebsocketServer::Stop() hanging if there were no connections accepted.
+    
+    The fix for this includes increasing the SDK level to .NET Framework 4.5
+
 ![Logo](websocket-sharp_logo.png)
 
 ## Welcome to websocket-sharp! ##
@@ -11,7 +16,8 @@ websocket-sharp supports:
 - [HTTP Authentication](#http-authentication)
 - [Query string, Origin header, and Cookies](#query-string-origin-header-and-cookies)
 - [Connecting through the HTTP proxy server](#connecting-through-the-http-proxy-server)
-- .NET Framework **3.5** or later (includes compatible environment such as [Mono])
+- ~~.NET Framework **3.5** or later (includes compatible environment such as [Mono])~~
+- - Now requires at least .NET Framework 4.5 for the async call
 
 ## Branches ##
 
